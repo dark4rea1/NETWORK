@@ -93,7 +93,6 @@ Due to issues with switches in GNS3, routers were used instead.
  | admin         | admin123 |
  | viewer        | viewer123|
  | tech          | tech123  |
- |---------------|----------|
 
 
 
