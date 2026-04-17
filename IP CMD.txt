@@ -1,0 +1,99 @@
+ip 192.168.10.10/24 192.168.10.1   - PC-A1
+ip 192.168.10.20/24 192.168.10.1   - PC-A1
+ip 192.168.20.10/24 192.168.20.1   - PC-B1
+ip 192.168.20.20/24 192.168.20.1   - PC-B2
+---------------------------------------------
+Faculty-A-Router:
+conf t
+interface f0/1
+ip address 192.168.10.1 255.255.255.0
+no shutdown
+---------------------------------------------
+Faculty-B-Router:
+conf t
+interface f0/1
+ip address 192.168.20.1 255.255.255.0
+no shutdown
+---------------------------------------------
+Faculty-A ↔ Main:
+interface f0/0
+ip address 10.0.12.2 255.255.255.0
+no shutdown
+---------------------------------------------
+Main Router:
+interface f1/0
+ip address 10.0.12.1 255.255.255.0
+no shutdown
+
+interface f0/1
+ip address 10.0.13.1 255.255.255.0
+no shutdown
+---------------------------------------------
+Faculty-B:
+interface f0/0
+ip address 10.0.13.2 255.255.255.0
+no shutdown
+---------------------------------------------
+
+ROUTING :
+
+Faculty-A:
+ip route 0.0.0.0 0.0.0.0 10.0.12.1
+
+
+Faculty-B:
+ip route 0.0.0.0 0.0.0.0 10.0.13.1
+
+
+Main Router:
+ip route 192.168.10.0 255.255.255.0 10.0.12.2
+ip route 192.168.20.0 255.255.255.0 10.0.13.2
+
+---------------------------------------------
+
+vm network
+
+sudo ip addr add 10.0.12.100/24 dev ens33
+
+
+---------------------------------------------
+
+
+TO TEST VM CONNECTION :
+
+
+ping 10.0.12.1
+ping 192.168.10.10
+
+
+----------------------------------------------
+
+
+
+VERY IMPORTANT BEFORE YOU FINSH IN ROUTERS TYPE (WR) OR (write memory) to save
+
+and in each Pc type : (save) to save each ip that we gave
+
+----------------------------------------------
+
+in your virtual machine terminal
+
+sudo ip addr flush dev ens33
+sudo ip addr add 192.168.99.100/24 dev ens33
+sudo ip link set ens33 up
+sudo ip route add 192.168.99.0/24 dev ens33
+
+=-=-=-=- then make a ping by using : 
+ping 192.168.99.1
+
+---------------------------------------------
+
+if everything works then add the first routes for the VM ( after that you can add them from the webpage in vm )
+
+sudo ip route add 10.0.12.0/24 via 192.168.99.1
+sudo ip route add 10.0.13.0/24 via 192.168.99.1
+sudo ip route add 192.168.10.0/24 via 192.168.99.1
+sudo ip route add 192.168.20.0/24 via 192.168.99.1
+
+---------------------------------------------
+
