@@ -89,9 +89,11 @@ Due to issues with switches in GNS3, routers were used instead.
 ## 🔑 Default Admin Login
 
  | USER NAME     | Password |
+ |---------------|----------|
  | admin         | admin123 |
  | viewer        | viewer123|
  | tech          | tech123  |
+ |---------------|----------|
 
 
 
