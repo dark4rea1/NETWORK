@@ -84,38 +84,6 @@ Due to issues with switches in GNS3, routers were used instead.
 git clone https://github.com/your-username/your-repo-name.git
 cd your-repo-name
 ```
-
-### 2. Create virtual environment
-
-```bash
-python3 -m venv venv
-source venv/bin/activate
-```
-
-### 3. Install dependencies
-
-```bash
-pip install flask
-```
-
-### 4. Initialize database
-
-```bash
-python init_db.py
-```
-
-### 5. Run the application
-
-```bash
-python app.py
-```
-
-### 6. Open in browser
-
-```
-http://localhost:5000
-```
-
 ---
 
 ## 🔑 Default Admin Login
