@@ -78,12 +78,12 @@ Due to issues with switches in GNS3, routers were used instead.
 
 ## ⚙️ Installation & Setup
 
-### 1. Clone the repository
+### 1. open the file world file (GNS3 PROJECT REPORT) READ IT ONLY AT FIRST .
+### 2. start by making the topology them open the file (IP CMD) and type the commands given
+### 3. for any suggestions send me on discord : 1drl
 
-```bash
-git clone https://github.com/your-username/your-repo-name.git
-cd your-repo-name
-```
+
+
 ---
 
 ## 🔑 Default Admin Login
