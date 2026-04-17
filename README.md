@@ -88,21 +88,15 @@ Due to issues with switches in GNS3, routers were used instead.
 
 ## 🔑 Default Admin Login
 
-| Role | University ID | Password |
-| ---- | ------------- | -------- |
-| Tech | tech001       | admin123 |
+ | USER NAME     | Password |
+ | ------------- | -------- |
+ | admin         | admin123 |
+ | ------------- | -------- |
+ | viewer        | viewer123|
+ | ------------- | -------- |
+ | tech          | tech123  |
+ | ------------- | -------- |
 
----
-
-## 📊 Future Improvements
-
-* Add **SNMP monitoring**
-* Real-time graphs (CPU, latency)
-* Email/Telegram alerts
-* Use MySQL/PostgreSQL
-* Improve UI (CSS/Bootstrap)
-* Add device history logs
-* Implement Captive Portal
 
 ---
 
