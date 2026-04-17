@@ -41,38 +41,6 @@ The system consists of:
     * Users
     * Devices
 
----
-
-## 👥 User Roles
-
-### 🔧 Technician (Admin)
-
-* Full access
-* Add/Delete users
-* Manage system
-
-### 👨‍🏫 Teacher
-
-* Login access
-* View assigned page
-
-### 👨‍🎓 Student
-
-* Login access
-* Displays: **"Student logged on"**
-
----
-
-## 🔐 Authentication System
-
-* Users log in using:
-
-  * University ID
-  * Password
-* After login:
-
-  * Redirected based on role
-* Implemented using **Flask sessions**
 
 ---
 
